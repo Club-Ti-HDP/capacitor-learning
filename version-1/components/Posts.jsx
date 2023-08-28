@@ -1,12 +1,12 @@
 import Link from "next/link"
 import { HIDetails, HIHeartEmpty, HIComment, HISend, HIReport } from "./Icons"
-export function Post() {
+export function Post({ post: { id, userPicture, username, description, image, likes, comments } }) {
     return (
         <div className="bg-white dark:bg-gray-900">
             <div className="p-2 justify-between flex font-semibold items-center">
                 <Link href="#" className="flex gap-2 items-center">
-                    <img className="rounded-full" src="https://placehold.co/40x40.png" alt="" />
-                    <span>username</span>
+                    <img className="rounded-full" src={userPicture ? userPicture : "https://placehold.co/40x40.png"} alt="" />
+                    <span>{username ? username : "entity_303"}</span>
                 </Link>
                 <Link href="#">
                     <HIDetails style="h-8 fill-gray-700 dark:fill-white" />

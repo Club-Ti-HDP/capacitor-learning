@@ -3,7 +3,7 @@ export default function Home() {
   const posts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   return (
     <main>
-      {posts.map((post, i) => <Post key={i} />)}
+      {posts.map((post, i) => <Post key={i} post={post} />)}
     </main>
   )
 }
